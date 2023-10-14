@@ -11,7 +11,6 @@ import Newproducts from "./component/Newproducts";
 import Featuredproducts from "./component/Featuredproducts";
 import SignInOutContainer from './component/SignInOutContainer';
 import NoMatch from "./component/NoMatch";
-import Datadisplay from "./component/Datadisplay";
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
       
     
       <Routes>
-      <Route path="/" element={<Home/>}/>
+      <Route path="/" element={<Home data={data}/>}/>
         <Route path="about/" element={<About/>}/>
         <Route path="contact/" element={<Contact/>}/>
         <Route path="order/" element={<Order/>}/>
@@ -48,7 +47,8 @@ function App() {
         <Route path="*" element={<NoMatch/>}/>
 
       </Routes>
-      <Datadisplay data={data}/>
+   
+   
       
     </>
   );
