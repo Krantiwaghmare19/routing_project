@@ -185,16 +185,6 @@ export default Signup;
 
 
 
-
-
-
-
-
-
-
-
-
-
 // import React from "react";
 
 // import Radio from '@mui/material/Radio';
