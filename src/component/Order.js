@@ -5,7 +5,7 @@ const Order =() => {
     const navigate = useNavigate()
     return(
         <>
-            <div>Order Confirmed...!</div>
+            <div>Congrats Your Order is Confirmed...!</div>
             <button onClick = {() => navigate(-1)}>Go Back</button>
         </>
     );
