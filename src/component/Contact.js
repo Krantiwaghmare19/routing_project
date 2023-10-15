@@ -60,7 +60,6 @@ const Contact =() =>{
                         autoComplete="off"
                         required
                     />
-
                     <textarea name="message" cols="30" rows="6">
 
                     </textarea>
@@ -69,8 +68,7 @@ const Contact =() =>{
 
             </div>
         </div>
-        </Wrapper>
-           
+        </Wrapper>    
     </>
     );
 };
