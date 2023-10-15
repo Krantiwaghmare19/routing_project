@@ -41,7 +41,7 @@ const Home =({data}) =>{
             ))}
         </List>
     </div>
-
+    
     <button onClick={() => navigate ("Order" , {replace: true})}> Your Order</button>
     </>
     );
