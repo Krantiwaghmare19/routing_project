@@ -9,7 +9,6 @@ import Paper from '@mui/material/Paper';
 
 const SignInOutContainer = () => {
   const [value, setValue] = useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
