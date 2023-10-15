@@ -38,12 +38,14 @@ const Login = (handleChange) => {
                 Forget Password
             </Link>
         </Typography>
+
         <Typography>
             <Link href="#" onClick={()=>handleChange("event",1)}>
             Do you have an account ?
                 Sigh Up
             </Link>
         </Typography>
+        
       </Paper>
 
     </Grid>
