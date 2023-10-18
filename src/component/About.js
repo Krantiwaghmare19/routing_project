@@ -22,7 +22,7 @@ const About = () => {
 
   const [rows, setRows] = useState([]);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5); // Default rows per page
+  const [rowsPerPage, setRowsPerPage] = useState(5); 
 
   useEffect(() => {
     fetch("https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001")
@@ -69,9 +69,9 @@ const About = () => {
             </Table>
           </TableContainer>
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25]} // Corrected this line
+            rowsPerPageOptions={[0,5, 10]} 
             page={page}
-            count={rows.length} // Corrected this line
+            count={rows.length}
             rowsPerPage={rowsPerPage}
             component="div"
             onPageChange={handlePageChange}

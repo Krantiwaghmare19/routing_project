@@ -12,6 +12,7 @@ import Featuredproducts from "./component/Featuredproducts";
 import SignInOutContainer from './component/SignInOutContainer';
 import NoMatch from "./component/NoMatch";
 import { useEffect, useState } from 'react';
+import Success from "./component/Success"
 
 function App() {
   const [data, setData] = useState([]);
@@ -29,6 +30,13 @@ function App() {
       });
   }, []);
 
+  const handledata=(signupdata)=>{
+    const data=signupdata
+    setData(data)
+    console.log(data)
+
+  }
+
   return (
     <>
       <Navbar/>
@@ -43,12 +51,11 @@ function App() {
           <Route path="featured/" element={<Featuredproducts/>}/>
           <Route path="new/" element={<Newproducts/>}/>
         </Route>
-        <Route path="SignInOutContainer/" element={<SignInOutContainer/>}/>
+        <Route path="SignInOutContainer/" element={<SignInOutContainer onclick={handledata}/>}/>
         <Route path="*" element={<NoMatch/>}/>
 
       </Routes>
-   
-   
+      <Success data={data}/>
       
     </>
   );

@@ -7,7 +7,7 @@ import Login from '../component/Login';
 import Signup from '../component/Signup';
 import Paper from '@mui/material/Paper';       
 
-const SignInOutContainer = () => {
+const SignInOutContainer = ({onclick}) => {
   const [value, setValue] = useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -44,7 +44,7 @@ const SignInOutContainer = () => {
         <Login handleChange={handleChange}/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Signup/>
+        <Signup onclick={onclick}/>
       </TabPanel>
     </Paper>
     </div>
