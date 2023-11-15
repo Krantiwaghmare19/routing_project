@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
       objectFit: 'cover',
       marginRight: '16px', 
     },
+   
   }));
 
 const Home =({data}) =>{
@@ -27,6 +28,7 @@ const Home =({data}) =>{
     return (
     <>
         <div>Home Page</div>
+        <div className="cart-wrapper">
         <div className={classes.root}>
         <Typography variant="h5">Product List</Typography>
         <List>
@@ -35,11 +37,16 @@ const Home =({data}) =>{
                 <img src={item.image} alt="Product" className={classes.image} />
                 <ListItemText>
                 <Typography variant="h6">Name: {item.title}</Typography>
-                <Typography variant="body1">Price: ${item.price}</Typography>
+                <Typography variant="body3">Price: ${item.price}</Typography>
+                <Typography variant="body2">Description: {item.description}</Typography>
+                <Typography variant="body2">Category: {item.category}</Typography>
+                <button>Add To Cart</button>
+
                 </ListItemText>
             </ListItem>
             ))}
         </List>
+    </div>
     </div>
     
     <button onClick={() => navigate ("Order" , {replace: true})}> Your Order</button>

@@ -53,9 +53,10 @@ function App() {
         </Route>
         <Route path="SignInOutContainer/" element={<SignInOutContainer onclick={handledata}/>}/>
         <Route path="*" element={<NoMatch/>}/>
+        <Route path="/success" element={< Success data={data}/>}/>
 
       </Routes>
-      <Success data={data}/>
+      
       
     </>
   );

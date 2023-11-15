@@ -7,8 +7,10 @@ import FormLabel from "@mui/material/FormLabel";
 import { Grid, Paper, Typography, Avatar, TextField, Checkbox ,Button} from "@mui/material";  // Added import for Checkbox
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import { Formik, Form, Field } from "formik";
+import { useNavigate } from "react-router-dom";
 
 const Signup = ({onclick}) => {
+  const navigate=useNavigate();
   const paperStyle = { padding: 20, width: 300, margin: "0 auto" };
   const headerStyle = { margin: 0 };
   const marginTop = { marginTop: 5 };
@@ -25,6 +27,7 @@ const Signup = ({onclick}) => {
 
   const onSubmit = (values, props) => {
     onclick(values)
+    navigate("/success")
   };
 
   return (
@@ -82,8 +85,9 @@ const Signup = ({onclick}) => {
                 Sign Up
               </Button> 
               
-
+          
             </Form>
+
           )}
         </Formik>
       </Paper>
