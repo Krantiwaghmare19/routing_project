@@ -41,7 +41,6 @@ const Home =({data}) =>{
                 <Typography variant="body2">Description: {item.description}</Typography>
                 <Typography variant="body2">Category: {item.category}</Typography>
                 <button>Add To Cart</button>
-
                 </ListItemText>
             </ListItem>
             ))}
